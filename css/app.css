@@ -8061,6 +8061,16 @@ main:focus {
   font-style: italic;
 }
 
+.cur-per-list ul.det-level-list {
+  list-style-image: none;
+  list-style-type: circle;
+  padding-bottom: 0;
+}
+.cur-per-list ul.det-level-list li {
+  padding-bottom: 0;
+  font-style: italic;
+}
+
 .vpd-dets {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #6D6E71;
@@ -8159,10 +8169,12 @@ main:focus {
   }
 }
 .cur-per-list ul {
-  list-style-position: inside;
   margin-left: 2.25rem;
   padding-bottom: 1rem;
   list-style-image: url(../img/caret-purp.png);
+}
+.cur-per-list li {
+  padding-bottom: 0.5rem;
 }
 .cur-per-list li span {
   font-style: italic;
