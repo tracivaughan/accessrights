@@ -8139,9 +8139,15 @@ main:focus {
 }
 .cur-per-list ul.det-level-list li {
   padding: 0;
-  font-style: italic;
   border: none;
   margin-bottom: 0;
+}
+
+.lowest-lvl-dets {
+  font-size: 0.9rem;
+  padding-left: 2rem;
+  text-indent: -1rem;
+  color: #414042;
 }
 
 .vpd-dets {
