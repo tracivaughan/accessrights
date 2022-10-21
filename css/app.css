@@ -7870,7 +7870,7 @@ main:focus {
   font-weight: 700;
 }
 .access-list .accordion-title {
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 .access-list h3 {
   position: relative;
@@ -7931,7 +7931,7 @@ main:focus {
 }
 
 .accordion-content {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
 }
 
 .accordion-title:hover,
@@ -8099,7 +8099,7 @@ main:focus {
   border-radius: 5px;
   background-position: 10px center;
   padding: 0.7rem 1.25rem 0.7rem 60px;
-  margin: 0 1rem 1.5rem 0;
+  margin: 0 0.94rem 1.5rem 0.93rem;
 }
 .has-sysaccts p {
   font-size: 0.9rem;
@@ -8272,8 +8272,8 @@ main:focus {
   }
 }
 .cur-per-list > ul {
-  margin-left: 4px;
-  padding-bottom: 1rem;
+  margin-left: 1rem;
+  padding-bottom: 0.2rem;
   list-style-type: none;
 }
 .cur-per-list > ul li {
