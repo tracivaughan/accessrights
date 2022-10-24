@@ -7869,8 +7869,14 @@ main:focus {
   color: #414042;
   font-weight: 500;
 }
+.access-list h4 {
+  font-weight: 700;
+}
 .access-list .accordion-title {
   padding: 0.25rem 0.5rem;
+}
+.access-list .accordion-content {
+  background-color: #F8FAFC;
 }
 .access-list h3 {
   position: relative;
@@ -7999,7 +8005,8 @@ main:focus {
 }
 
 .cat-section {
-  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .tag {
@@ -8303,8 +8310,10 @@ main:focus {
   margin-left: 1rem;
   padding-bottom: 0.2rem;
   list-style-type: none;
+  margin-bottom: 0.75rem;
 }
 .cur-per-list > ul li {
+  background-color: #fefefe;
   position: relative;
   padding: 0.5rem;
   padding-right: 60px;
@@ -8327,7 +8336,7 @@ main:focus {
 }
 
 .is-an-app {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: #1E1E2B;
   font-size: 0.9rem;
@@ -8341,7 +8350,7 @@ main:focus {
 
 .is-data {
   color: #1C7E86;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
