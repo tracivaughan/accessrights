@@ -7884,9 +7884,6 @@ main:focus {
   border-radius: 5px;
   font-size: 0.9rem;
 }
-.cur-per-list li span {
-  font-style: italic;
-}
 .cur-per-list li::marker {
   color: #3A368D;
 }
