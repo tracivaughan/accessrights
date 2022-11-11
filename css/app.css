@@ -7607,6 +7607,9 @@ main:focus {
 .profile-single.is-sysacct {
   background: linear-gradient(#DE55FE, #77218A);
 }
+.profile-single.is-empty {
+  background: linear-gradient(#FEBB55, #C47B0D);
+}
 
 .profile-type {
   padding: 1rem 0.5rem;
@@ -7639,6 +7642,15 @@ main:focus {
   background-color: #DFCEE2;
 }
 
+.is-empty .profile-type {
+  background-color: #FFEBCD;
+  font-size: 1.2rem;
+  color: #754907;
+}
+.is-empty .profile-type p {
+  margin-bottom: 0;
+}
+
 .profile-type-name {
   min-height: 40px;
   padding-left: 48px;
@@ -7662,7 +7674,8 @@ main:focus {
   text-align: right;
 }
 
-.has-sysaccts {
+.has-sysaccts,
+.has-otherIDs {
   background-color: #F0E9F2;
   color: #76218A;
   flex: 0 0 auto;
@@ -7674,20 +7687,25 @@ main:focus {
   padding: 0.7rem 1.25rem 0.7rem 60px;
   margin: 0 0.94rem 1.5rem 0.93rem;
 }
-.has-sysaccts p {
+.has-sysaccts p,
+.has-otherIDs p {
   font-size: 0.9rem;
   margin-bottom: 0;
 }
-.has-sysaccts a:link {
+.has-sysaccts a:link,
+.has-otherIDs a:link {
   border-bottom: 1px dotted transparent;
   font-weight: 700;
   color: #76218A;
 }
-.has-sysaccts a:visited {
+.has-sysaccts a:visited,
+.has-otherIDs a:visited {
   color: #414042;
 }
 .has-sysaccts a:hover,
-.has-sysaccts a:focus {
+.has-sysaccts a:focus,
+.has-otherIDs a:hover,
+.has-otherIDs a:focus {
   color: #084D81;
 }
 
@@ -7706,6 +7724,15 @@ main:focus {
     margin-left: 0.9375rem;
     margin-right: 0.9375rem;
   }
+}
+
+.has-otherid {
+  background-color: #D3E2CE;
+  background-image: url("data:image/svg+xml,%3Csvg width='37px' height='38px' viewBox='0 0 37 38' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cellipse id='path-9trvs5cdk1-1' cx='18.5' cy='19' rx='18.5' ry='19'%3E%3C/ellipse%3E%3C/defs%3E%3Cg id='UI-rd1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='profle-copy' transform='translate(-117.000000  -1076.000000)'%3E%3Cg id='Group-3' transform='translate(117.000000  1076.000000)'%3E%3Cg id='sys-profile'%3E%3Cmask id='mask-9trvs5cdk1-2' fill='white'%3E%3Cuse xlink:href='%23path-9trvs5cdk1-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23FFFFFF' xlink:href='%23path-9trvs5cdk1-1'%3E%3C/use%3E%3C/g%3E%3Cg id='noun-duplicate-3082088' transform='translate(6.000000  6.000000)' fill='%23204A16' fill-rule='nonzero'%3E%3Cpath d='M23.6066854 0 L7.30802252 0 C6.5456438 0 5.9410817 0.605395799 5.9410817 1.36846731 L5.9410817 5.94742271 L1.36694082 5.94742271 C0.604562098 5.94742271 0 6.55273079 0 7.31580231 L0 23.6316204 C0 24.3948016 0.604671632 25 1.36694082 25 L17.6656037 25 C18.4279825 25 19.0325446 24.3946919 19.0325446 23.6316204 L19.0326301 19.052665 L23.6330592 19.052665 C24.3954379 19.052665 25 18.4473569 25 17.6842854 L25 1.36846731 C24.9737294 0.60528615 24.3690621 0 23.606771 0 L23.6066854 0 Z M16.2985753 22.2896005 L2.70759347 22.2896005 L2.70759347 8.68431348 L5.94103789 8.68431348 L5.94103789 17.7106451 C5.94103789 18.4738263 6.54570952 19.0790247 7.30797871 19.0790247 L16.2985753 19.0790247 L16.2985753 22.2896005 Z M22.265989 16.3159058 L8.67500716 16.3159058 L8.67500716 2.71061879 L22.265989 2.71061879 L22.265989 16.3159058 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M11.4352646 10.8948437 L14.0903694 10.8948437 L14.0903694 13.5527431 C14.0903694 13.7369188 14.2480808 13.8684892 14.4057835 13.8684892 L16.4563043 13.8684892 C16.6402864 13.8684892 16.7717185 13.7106118 16.7717185 13.5527431 L16.771804 10.8948437 L19.4269088 10.8948437 C19.6108909 10.8948437 19.742323 10.7369662 19.742323 10.5790975 L19.742323 8.52641847 C19.742323 8.34224271 19.5846115 8.2106723 19.4269088 8.2106723 L16.8243804 8.21058664 L16.8243804 5.50005557 C16.8243804 5.31587981 16.6666689 5.1843094 16.5089662 5.1843094 L14.4584454 5.1843094 C14.2744633 5.1843094 14.1430313 5.34218687 14.1430313 5.50005557 L14.1430313 8.15795497 L11.4353502 8.15795497 C11.251368 8.15795497 11.119936 8.31583244 11.119936 8.47370114 L11.119936 10.5263802 C11.119936 10.736942 11.2513768 10.8948238 11.4353502 10.8948238 L11.4352646 10.8948437 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+.has-otherid p {
+  color: #204A16;
 }
 
 .permission-grp {
@@ -7750,7 +7777,6 @@ main:focus {
 .vpd-dets {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #6D6E71;
-  display: inline-block;
   margin: 0;
 }
 .vpd-dets:before {
@@ -8097,18 +8123,18 @@ input[type=radio] {
   color: #cc4b37;
 }
 
-.access-list h2.research, .access-list h2.finance, .access-list h2.privileged {
-  color: #084D81;
-}
-.access-list h2.research span, .access-list h2.finance span, .access-list h2.privileged span {
-  border-color: #BDDBF1;
-}
-.access-list h2.studentinfo, .access-list h2.capital, .access-list h2.HR {
+.cat-section:nth-child(odd) h2 {
   color: #0B0B60;
 }
-.access-list h2.studentinfo span, .access-list h2.capital span, .access-list h2.HR span {
-  border-color: #BDD0DE;
+.cat-section:nth-child(odd) h2 span {
   border-color: #E2E1E9;
+}
+
+.cat-section:nth-child(even) h2 {
+  color: #084D81;
+}
+.cat-section:nth-child(even) h2 span {
+  border-color: #BDDBF1;
 }
 
 .copyright {
