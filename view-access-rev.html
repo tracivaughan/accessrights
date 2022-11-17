@@ -15,14 +15,14 @@
 <body>
     <aside id="skip"><a href="#main">skip to content</a></aside>
     <header>
-        <!--
+
         <div class="swap">
             <div class="grid-container">
                 <div class="grid-x">
                     <div class="cell medium-12">
-                        <form>-->
-        <!-- the current persona and the switch button only show if they have assumed another identity-->
-        <!--  <span class="otherID"> Viewing as <em>abelincoln</em> | <button
+                        <form>
+                            <!-- the current persona and the switch button only show if they have assumed another identity-->
+                            <span class="otherID"> Viewing as <em>abelincoln</em> | <button
                                     class="button clear revertID">Switch to my
                                     account</button> </span>
                             <label for="swapper">Assume other identity: </label>
@@ -35,7 +35,7 @@
 
 
                 </div>
-            </div>-->
+            </div>
 
         </div>
         <div class="topbrand">
@@ -136,14 +136,44 @@
                             </h1>
 
                             <div class="filterbar">
-                                Show: <ul class="filter-options">
-                                    <li>All profiles</li>
-                                    <li>Banner only</li>
-                                    <li>Data Warehouse/Reporting only</li>
-                                </ul>
-                                <!-- <p class="download-opts"><button type="button" class="button clear small">Download
-                                        XLS</button> </p>-->
+                                <div class="filters">
+                                    <button class="button clear pop-cntl" data-toggle="filter1"
+                                        aria-label="Limit search results to ">Limit to:</button>
 
+
+                                    <div class="dropdown-pane" id="filter1" data-dropdown data-auto-focus="false"
+                                        data-hover-pane="true" data-close-on-click="true">
+                                        <fieldset>
+                                            <legend class="show-for-sr">Check options to include</legend>
+                                            <label for="bannerapp"><input type="checkbox" id="bannerapp"
+                                                    name="filter-list" checked>Applications </label>
+
+                                            <label for="dw"><input type="checkbox" id="dw" name="filter-list" checked>
+                                                Data sources</label>
+                                            <label for="reports"><input type="checkbox" id="reports" name="filter-list"
+                                                    checked>
+                                                Reports</label>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="sorts">
+                                    <button class="button ordering pop-cntl" data-toggle="order-drop"
+                                        aria-label="Select how to order results">Order by</button>
+                                    <div class="dropdown-pane" id="order-drop" data-dropdown data-auto-focus="false"
+                                        data-hover-pane="true" data-close-on-click="true">
+                                        <fieldset>
+                                            <legend class="show-for-sr">Select a way to order:</legend>
+                                            <label for="order-new"><input type="radio" id="order-new" name="order-list"
+                                                    checked>Subject area
+                                            </label>
+                                            <label for="order-old"><input type="radio" id="order-old"
+                                                    name="order-list">Application / report name
+                                            </label>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
                             </div>
 
                             <section class="cat-section">
@@ -876,6 +906,14 @@
                                 </ul>
                             </section>
 
+                            <div class="actionbar">
+
+
+                                <!-- <button type="button" class="button">Edit access</button>-->
+                                <button type="button" class="button act-btn util">Download CSV</button>
+
+                                <p class="util-back"><a href="index">Return to dashboard</a> </p>
+                            </div>
 
                         </div>
 
