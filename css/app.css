@@ -7105,6 +7105,12 @@ body {
   color: #6D6E71;
 }
 
+.sdetail {
+  font-size: 0.8rem;
+  color: #6D6E71;
+  display: flex;
+}
+
 .offscreen {
   position: absolute !important;
   height: 1px;
@@ -7804,6 +7810,13 @@ main:focus {
   padding-left: 2rem;
   text-indent: -1rem;
   color: #414042;
+}
+
+ul.lowest-lvl-dets {
+  list-style-type: circle;
+  text-indent: 0;
+  margin: 0 0 0 2rem;
+  padding-left: 0;
 }
 
 .vpd-dets {
