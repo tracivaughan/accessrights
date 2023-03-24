@@ -8971,6 +8971,16 @@ input[type=text]:disabled {
   font-weight: 700;
 }
 
+.for-guide {
+  border: none;
+  background-color: #FFEBCD;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.for-guide p {
+  font-weight: 400;
+}
+
 .autocomplete__wrapper {
   position: relative;
 }
