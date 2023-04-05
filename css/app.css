@@ -7170,7 +7170,7 @@ a:focus {
 a:focus,
 button:focus,
 .button:focus {
-  outline: 2px dotted #0a0a0a;
+  outline: 2px solid #0a0a0a;
   outline-offset: 2px;
 }
 
@@ -7360,6 +7360,7 @@ a.cancel-link:focus {
 .navbar a:link,
 .navbar a:visited {
   border-bottom-color: transparent;
+  color: #0c3759;
 }
 .navbar a:hover,
 .navbar a:focus {
@@ -7589,6 +7590,14 @@ main:focus {
   font-weight: 500;
 }
 
+.searchbar.req-process {
+  margin-bottom: 0;
+}
+
+.main-actions {
+  margin: 2.75rem 0;
+}
+
 .settings-head {
   padding-left: 58px;
   background: url(../img/settings-head.png) left top no-repeat;
@@ -7687,6 +7696,7 @@ main:focus {
     width: calc(83.3333333333% - 1.875rem);
     margin-left: 0.9375rem;
     margin-right: 0.9375rem;
+    margin: 0;
   }
 }
 .profile-single.is-person {
@@ -7718,10 +7728,24 @@ main:focus {
   vertical-align: bottom;
   font-size: 0.9rem;
 }
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 64em) {
   .profile-type > div {
     flex: 0 0 auto;
     width: calc(33% - 1.875rem);
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+  }
+}
+
+.profile-type.min-profile {
+  padding: 0.5rem 0.2rem;
+  margin-left: 0;
+  align-items: baseline;
+}
+@media print, screen and (min-width: 64em) {
+  .profile-type.min-profile > div {
+    flex: 0 0 auto;
+    width: calc(50% - 1.875rem);
     margin-left: 0.9375rem;
     margin-right: 0.9375rem;
   }
@@ -7759,6 +7783,16 @@ main:focus {
   margin-bottom: 0;
 }
 
+.separation {
+  display: inline-block;
+  margin-bottom: -2px;
+  background-color: #091F41;
+  color: #fff;
+  padding: 0.3rem 0.75rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
 .profile-type-name {
   min-height: 40px;
   padding-left: 48px;
@@ -7781,7 +7815,7 @@ main:focus {
 .nada {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #A802CF;
+  color: #451C4E;
   padding-top: 1rem;
 }
 
@@ -7794,8 +7828,10 @@ main:focus {
   font-size: 1.25rem;
 }
 
-.profile-type-flags {
-  text-align: right;
+@media print, screen and (min-width: 64em) {
+  .profile-type-flags {
+    text-align: right;
+  }
 }
 
 .plus-accts {
@@ -7835,7 +7871,8 @@ main:focus {
   border-radius: 5px;
   background-position: 10px center;
   padding: 0.7rem 1.25rem 0.7rem 60px;
-  margin: 0 0.94rem 1.5rem 0.93rem;
+  margin-bottom: 1.5rem;
+  max-width: 892px;
 }
 .has-sysaccts p,
 .has-otherIDs p {
@@ -8167,6 +8204,33 @@ ul.lowest-lvl-dets {
   padding: 0;
 }
 
+.method-opts {
+  border: none;
+  border-bottom: 1px solid #99acb4;
+}
+.method-opts .tabs-title > a {
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 4px solid transparent;
+  padding: 1rem 1.25rem;
+  margin-right: 3px;
+  background-color: #F1F4F7;
+}
+.method-opts .tabs-title > a:hover,
+.method-opts .tabs-title > a:focus {
+  border-bottom-color: #084D81;
+  color: #084D81;
+}
+.method-opts .tabs-title > a[aria-selected=true] {
+  background-color: #fefefe;
+  color: #0c3759;
+  border-bottom-color: #88bfff;
+}
+
+.method-opts-content {
+  border: none;
+}
+
 .detail-form label,
 .detail-form legend {
   font-weight: 600;
@@ -8495,6 +8559,21 @@ select:active {
 }
 .util-btn:hover, .util-btn:focus {
   background-color: #07A5E9;
+  color: black;
+}
+
+.prime-btn {
+  background-color: #82d6ff;
+  color: #0c3759;
+}
+
+.caution-btn {
+  background-color: #FBEAE9;
+  color: #451C4E;
+}
+.caution-btn:hover, .caution-btn:focus {
+  background-color: #B82025;
+  color: white;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -8510,6 +8589,20 @@ select:active {
 .search-label label {
   line-height: 1.2;
   padding-bottom: 0.25rem;
+}
+
+.req-process-results h1 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.boundry {
+  margin-left: 0.9375rem;
+  border-left: 6px solid #FFAE00;
+  padding: 0.4rem 0 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  background-color: #FCF3DB;
+  max-width: 900px;
 }
 
 .multi-search {
@@ -8969,6 +9062,42 @@ input[type=text]:disabled {
 
 .stress {
   font-weight: 700;
+}
+
+.caveat {
+  margin: 0.5rem 0 1.5rem 0;
+  padding: 0.75rem 0 0.75rem 55px;
+  border: 1px solid #AC0000;
+  border-left: none;
+  border-right: none;
+  color: #B82025;
+  background-image: url("data:image/svg+xml,%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-2' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='noun-warning-5623735' fill='%23AC0000' fill-rule='nonzero'%3E%3Cpath d='M20.00027 22 C21.1047745 22 22.00025 21.10452 22.00025 20 L22.00025 14 C22.00025 12.89548 21.1047745 12 20.00027 12 C18.8957455 12 18.00027 12.89548 18.00027 14 L18.00027 20 C18.00027 21.10452 18.8957455 22 20.00027 22 Z' id='Path'%3E%3C/path%3E%3Cpath d='M20.00027 28 C21.1047745 28 22.00025 27.10452 22.00025 26 C22.00025 24.89548 21.1047745 24 20.00027 24 C18.8957455 24 18.00027 24.89548 18.00027 26 C18.00027 27.10452 18.8957455 28 20.00027 28 Z' id='Path'%3E%3C/path%3E%3Cpath d='M0 20 C0 8.9544 8.95455523 0 20.0001 0 C31.0456448 0 40 8.9544 40 20 C40 31.0456 31.0456448 40 20.0001 40 L2.00019 40 C1.11895441 40 0.341438293 39.42296 0.0861195694 38.57952 C-0.169347153 37.73592 0.157527212 36.82484 0.890795546 36.33576 L5.20637397 33.45904 C1.97391013 29.90732 0 25.18344 0 19.99984 L0 20 Z M20.0001 3.99984 C11.1637442 3.99984 4.00018 11.1636 4.00018 20 C4.00018 24.8992 6.199529 29.282 9.67175164 32.22 C10.1514292 32.6258 10.4123879 33.2336 10.3765881 33.86108 C10.3406507 34.48844 10.0120579 35.06248 9.48923255 35.41076 L8.60579697 35.99984 L20.00014 35.99984 C28.8364958 35.99984 36.00006 28.83624 36.00006 19.99984 C36.00006 11.16344 28.8364958 3.99984 20.00014 3.99984 L20.0001 3.99984 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: left 0.75rem;
+  background-repeat: no-repeat;
+}
+
+.temp-usc-pullout {
+  margin-left: -4rem;
+  padding: 0.25rem 1.75rem 0.25rem 3.75rem;
+  background-color: #DCF0FF;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.temp-home-oview {
+  padding-left: 2.5rem;
+}
+@media print, screen and (min-width: 64em) {
+  .temp-home-oview {
+    padding-right: 320px;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .home-feature {
+    background: #fff url(../img/home-bgimage.png) right top no-repeat;
+    background-size: contain;
+  }
 }
 
 .for-guide {
