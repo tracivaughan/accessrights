@@ -8139,9 +8139,28 @@ ul.lowest-lvl-dets {
 }
 
 .topcat {
-  background-color: #e6e6e6;
+  background-color: #e7edf2;
   margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
+}
+.topcat h3 {
+  font-weight: 600;
+  margin-bottom: 0;
+  border-left: 5px solid #0c3759;
+  padding: 0.75rem 0 0.75rem 1rem;
+}
+
+.topcat-subs {
+  padding: 0.75rem 0 0.75rem 1rem;
+  border-left: 5px solid transparent;
+}
+
+.choice-checklist legend {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -1900px;
 }
 
 .batch {
@@ -8206,29 +8225,46 @@ ul.lowest-lvl-dets {
 
 .method-opts {
   border: none;
-  border-bottom: 1px solid #99acb4;
+  border-bottom: 1px solid #e7edf2;
+  background-color: #e7edf2;
 }
 .method-opts .tabs-title > a {
   font-size: 1rem;
   font-weight: 600;
   border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
   padding: 1rem 1.25rem;
   margin-right: 3px;
   background-color: #F1F4F7;
+  margin-bottom: -1px;
 }
 .method-opts .tabs-title > a:hover,
 .method-opts .tabs-title > a:focus {
-  border-bottom-color: #084D81;
+  border-top-color: #084D81;
   color: #084D81;
 }
 .method-opts .tabs-title > a[aria-selected=true] {
   background-color: #fefefe;
   color: #0c3759;
-  border-bottom-color: #88bfff;
+  border-top-color: #88bfff;
+  border-bottom-color: #fefefe;
+}
+.method-opts .tabs-title > a:last-child {
+  border-right: 1px solid #F1F4F7;
 }
 
 .method-opts-content {
   border: none;
+}
+.method-opts-content select {
+  max-width: 500px;
+}
+.method-opts-content .wrapper500 {
+  max-width: 500px;
+}
+
+.steps {
+  font-weight: 600;
 }
 
 .detail-form label,
@@ -8526,6 +8562,10 @@ select:active {
   }
 }
 
+legend {
+  margin-bottom: 0;
+}
+
 .main-lookup input[type=text] {
   padding: 0.6rem 0.8rem;
   height: 3rem;
@@ -8716,7 +8756,7 @@ select:active {
   transform-origin: bottom left;
   transition: 120ms transform ease-in-out;
   /* Windows High Contrast Mode */
-  background-color: #599be8;
+  background-color: #2984EE;
   background-image: url("data:image/svg+xml,%3Csvg width='16px' height='14px' viewBox='0 0 16 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='noun-check-4798341' fill='%23FFFFFF'%3E%3Cpolygon id='Path' points='5.92116302 7.2779297 13.2446124 -9.06307836e-16 16 2.88795946 5.82381761 13 -5.55111512e-16 6.79590606 2.85222069 4.00780182'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
@@ -8725,7 +8765,7 @@ select:active {
 .quest input[type=checkbox]:checked,
 .check-align input[type=checkbox]:checked,
 .checks input[type=checkbox]:checked {
-  border-color: #599be8;
+  border-color: #2984EE;
 }
 .quest input[type=checkbox]:checked::before,
 .check-align input[type=checkbox]:checked::before,
@@ -8735,7 +8775,7 @@ select:active {
 .quest input[type=checkbox]:focus,
 .check-align input[type=checkbox]:focus,
 .checks input[type=checkbox]:focus {
-  outline: max(2px, 0.15em) dotted #599be8;
+  outline: max(2px, 0.15em) dotted #2984EE;
   outline-offset: max(2px, 0.15rem);
 }
 .quest input[type=checkbox]:disabled,
@@ -8818,7 +8858,7 @@ input[type=radio]::before {
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1rem 1rem var(--form-control-color);
   /* Windows High Contrast Mode */
-  background-color: #599be8;
+  background-color: #2984EE;
 }
 
 input[type=radio]:checked::before {
@@ -8826,7 +8866,7 @@ input[type=radio]:checked::before {
 }
 
 input[type=radio]:focus {
-  outline: max(2px, 0.15em) dotted #599be8;
+  outline: max(2px, 0.15em) dotted #2984EE;
   outline-offset: max(2px, 0.15em);
 }
 
@@ -8878,6 +8918,10 @@ input[type=radio]:focus {
   display: inline-block;
 }
 
+.process-step {
+  margin-top: 2rem;
+}
+
 .twbtn {
   background-color: #9BDEE4;
   color: #0a0a0a;
@@ -8886,6 +8930,11 @@ input[type=radio]:focus {
 
 .twbtn:hover {
   background-color: #3DC0CA;
+  color: #0a0a0a;
+}
+
+.secbtn {
+  background-color: #B0D5E6;
   color: #0a0a0a;
 }
 
@@ -8901,6 +8950,10 @@ input[type=radio]:focus {
 }
 input[type=text]:disabled {
   background-color: #e9f1f8;
+}
+
+.opt-block {
+  padding: 1rem;
 }
 
 .cat-section:nth-child(odd) h2 {
@@ -9098,6 +9151,95 @@ input[type=text]:disabled {
     background: #fff url(../img/home-bgimage.png) right top no-repeat;
     background-size: contain;
   }
+}
+
+.divider {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 2.5rem;
+}
+
+.guide {
+  font-style: italic;
+}
+
+.instructions-ov {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+.picker {
+  color: #0c3759;
+}
+
+.radio-bars {
+  max-width: 500px;
+}
+.radio-bars .radiobtn {
+  position: relative;
+  display: block;
+}
+.radio-bars .radiobtn label {
+  display: block;
+  background-color: #e7edf2;
+  color: #000;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.radio-bars .radiobtn label:after,
+.radio-bars .radiobtn label:before {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background: #fefefe;
+}
+.radio-bars .radiobtn label:before {
+  background: transparent;
+  transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+  z-index: 2;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  width: 0;
+  height: 0;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+);
+}
+.radio-bars input[type=radio] {
+  position: absolute;
+  width: 100%;
+  appearance: none;
+  border-color: transparent;
+}
+.radio-bars input[type=radio] {
+  border-color: transparent;
+  outline: none;
+}
+.radio-bars input[type=radio]:before {
+  background-color: transparent;
+}
+.radio-bars input[type=radio]:checked + label {
+  background: #C8DBE9;
+  animation-name: blink;
+  animation-duration: 1s;
+}
+.radio-bars input[type=radio]:checked + label:after {
+  background: #0c3759;
+}
+.radio-bars input[type=radio]:checked + label:before {
+  width: 20px;
+  height: 20px;
+}
+.radio-bars input[type=radio]:focus + label:after {
+  outline: 2px solid #0c3759;
+  outline-offset: 1px;
 }
 
 .for-guide {
